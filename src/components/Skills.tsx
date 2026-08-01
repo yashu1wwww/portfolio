@@ -424,7 +424,7 @@ const GitIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) =>
 
 const KaliLinuxIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
   <img
-    src="https://www.svgrepo.com/show/330767/kalilinux.svg"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSmkzLAzlecTxGwGHS39_K6_uXoOuQ8ztwpinr4JW2tQ&s=10"
     alt="Kali Linux"
     referrerPolicy="no-referrer"
     className={`${className} object-contain`}
@@ -442,7 +442,7 @@ const OverleafIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" 
 
 const AndroidHackingIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
   <img
-    src="https://www.svgrepo.com/show/494260/android.svg"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBctTNk_GRNesVzQurKqWOnt53Wvv_b9DvjLbJmYRBXA&s=10"
     alt="Android Hacking"
     referrerPolicy="no-referrer"
     className={`${className} object-contain`}
