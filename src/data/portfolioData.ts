@@ -10,7 +10,7 @@ export const PERSONAL_INFO = {
   githubInsightTool: "https://githubinfofetcher.netlify.app/",
   kaggle: "https://www.kaggle.com/yashu1wwww/code",
   greasyfork: "https://greasyfork.org/en/users/1405453-yashwanth-r",
-  resumeUrl: "https://www.overleaf.com/read/vxrfzrqxpkfk#92b8c5",
+  resumeUrl: "https://drive.google.com/file/d/1c27N6qWkuzpxTqA_gX2W0_lJzZdDVHdF/view",
   knowMoreUrl: "https://www.google.com/search?q=yashu1wwww&oq=yashu&gs_lcrp=EgZjaHJvbWUqBggBEEUYOzIGCAAQRRg8MgYIARBFGDsyBggCEEUYOTIGCAMQRRg8MgYIBBBFGDwyBggFEEUYPNIBCDE2OTNqMGo3qAIAsAIA&sourceid=chrome&source=chrome.ob&ie=UTF-8",
   location: "Tumkur, Karnataka, India",
   stats: {
