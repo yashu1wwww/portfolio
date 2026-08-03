@@ -4,7 +4,6 @@ import { ArrowUp } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [showArrow, setShowArrow] = useState(false);
-  const [visitorCount, setVisitorCount] = useState<number>(1);
   const shouldReduceMotion = useReducedMotion();
 
   useEffect(() => {
@@ -15,52 +14,9 @@ export const Footer: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  useEffect(() => {
-    let isMounted = true;
-    const fetchVisitors = async () => {
-      try {
-        const res = await fetch('https://api.counterapi.dev/v1/yashu1wwww_portfolio/visits/up');
-        if (res.ok) {
-          const data = await res.json();
-          if (data && typeof data.count === 'number' && isMounted) {
-            setVisitorCount(data.count);
-            localStorage.setItem('yashu_visitor_count', String(data.count));
-            return;
-          }
-        }
-      } catch (err) {
-        // Fallback to local persistent counter
-      }
-
-      const localStored = localStorage.getItem('yashu_visitor_count');
-      const sessionKey = 'yashu_visited_session';
-      let currentCount = localStored ? parseInt(localStored, 10) : 1;
-      
-      if (!sessionStorage.getItem(sessionKey)) {
-        sessionStorage.setItem(sessionKey, 'true');
-        if (localStored) {
-          currentCount += 1;
-        }
-      }
-      if (isNaN(currentCount) || currentCount < 1) currentCount = 1;
-      localStorage.setItem('yashu_visitor_count', String(currentCount));
-      
-      if (isMounted) {
-        setVisitorCount(currentCount);
-      }
-    };
-
-    fetchVisitors();
-    return () => {
-      isMounted = false;
-    };
-  }, []);
-
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
-  const formattedCount = String(visitorCount).padStart(3, '0');
 
   return (
     <footer className="relative bg-[#050505] border-t border-white/10 py-3 sm:py-4 overflow-hidden select-none">
@@ -69,17 +25,6 @@ export const Footer: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center justify-center text-center space-y-1.5 sm:space-y-2">
         
-        {/* Real-Time Visitor Counter Badge */}
-        <div className="flex items-center justify-center gap-2 px-3.5 py-1 bg-white/5 border border-white/10 rounded-full backdrop-blur-md shadow-inner transition-all hover:border-orange-500/40">
-          <span className="relative flex h-2 w-2">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-          </span>
-          <span className="text-xs sm:text-sm font-mono tracking-widest text-white/80 uppercase">
-            VISITORS COUNT: <span className="text-orange-400 font-bold font-mono text-sm sm:text-base ml-1">{formattedCount}</span>
-          </span>
-        </div>
-
         {/* Main Text Container with Center Illumination Effect */}
         <div className="relative group cursor-pointer">
           {/* Synchronized Center Illumination Aura */}
