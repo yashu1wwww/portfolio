@@ -131,7 +131,7 @@ export const Footer: React.FC = () => {
                     ease: "easeInOut",
                   }
             }
-            className="text-lg sm:text-2xl md:text-3xl font-semibold text-white tracking-wider font-sans relative z-10 transition-all duration-300 group-hover:text-orange-400 group-hover:drop-shadow-[0_0_20px_rgba(249,115,22,0.8)]"
+            className="text-xs sm:text-sm md:text-base font-medium text-white tracking-wider font-sans relative z-10 transition-all duration-300 group-hover:text-orange-400 group-hover:drop-shadow-[0_0_20px_rgba(249,115,22,0.8)]"
           >
             Designed &amp; Developed by Yashwanth R
           </motion.h3>
