@@ -367,9 +367,21 @@ interface SkillItem {
 
 // Custom Sharp SVG Icons for official brand accuracy
 const WordPressIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="currentColor">
-    <path d="M12 0C5.37 0 0 5.37 0 12s5.37 12 12 12 12-5.37 12-12S18.63 0 12 0zm0 1.1c6.02 0 10.9 4.88 10.9 10.9 0 2.22-.66 4.28-1.8 6.01l-4.78-13.1c.36-.04.72-.07 1.08-.07h.12v-.83H12.9v.83h.19c.47 0 .86.23.86.72 0 .15-.04.33-.09.49l-1.37 3.99-1.3-3.92c-.06-.17-.09-.32-.09-.48 0-.49.39-.72.86-.72h.19v-.83H7.81v.83h.17c.45 0 .81.23.81.72 0 .13-.03.28-.08.43L4.03 17.51C2.55 15.89 1.1 13.9 1.1 12 1.1 5.98 5.98 1.1 12 1.1zm-8.31 12c0 1.34.33 2.61.92 3.73l3.52-10.23L4.54 12.1c-.53.29-.85.67-.85 1zm8.31 9.8c-1.89 0-3.66-.54-5.17-1.46l4.28-12.44 3.79 10.37c-.02.04-.04.09-.07.13l-2.03 3.33c-.23.05-.51.07-.8.07zm3.17-.67l2.25-3.69 1.77 4.85c-1.19.8-2.61 1.28-4.02 1.28-.8 0-1.58-.15-2.31-.42zm6.26-3.15l-3.32-9.1 1.76-4.84c1.19 1.57 1.9 3.53 1.9 5.64 0 2.97-1.38 5.61-3.4 7.33z" fill="#21759B" />
-  </svg>
+  <img
+    src="https://www.svgrepo.com/show/475696/wordpress-color.svg"
+    alt="WordPress"
+    referrerPolicy="no-referrer"
+    className={`${className} object-contain`}
+  />
+);
+
+const PhpIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
+  <img
+    src="https://www.svgrepo.com/show/373969/php2.svg"
+    alt="PHP"
+    referrerPolicy="no-referrer"
+    className={`${className} object-contain`}
+  />
 );
 
 const PythonIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
@@ -398,22 +410,21 @@ const BurpSuiteIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7"
 );
 
 const CanvaIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="none">
-    <circle cx="12" cy="12" r="12" fill="url(#canvaGrad)" />
-    <path d="M12.6 7.2c-2.4 0-4.1 1.7-4.1 4.3 0 3 2.1 5.3 5.1 5.3 1.8 0 3.2-.8 3.8-2.1l-1.3-.7c-.4.8-1.3 1.3-2.4 1.3-1.8 0-3.1-1.3-3.2-3.1h7.1c0-.3.1-.7.1-1 0-2.3-1.8-4-5.1-4zm-2.4 3.3c.2-1.3 1.1-2.1 2.4-2.1 1.2 0 2.1.8 2.2 2.1h-4.6z" fill="#FFFFFF" />
-    <defs>
-      <linearGradient id="canvaGrad" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#00C4CC" />
-        <stop offset="1" stopColor="#7D2AE8" />
-      </linearGradient>
-    </defs>
-  </svg>
+  <img
+    src="https://static.vecteezy.com/system/resources/thumbnails/032/329/171/small_2x/canva-icon-logo-symbol-free-png.png"
+    alt="Canva"
+    referrerPolicy="no-referrer"
+    className={`${className} object-contain`}
+  />
 );
 
 const DockerIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
-  <svg className={className} viewBox="0 0 24 24" fill="#2496ED">
-    <path d="M13.983 11.078h2.119a.186.186 0 00.186-.185V9.006a.186.186 0 00-.186-.186h-2.119a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185zm-2.954-5.43h2.118a.185.185 0 00.186-.186V3.575a.185.185 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186zm0 2.716h2.118a.185.185 0 00.186-.186V6.29a.185.185 0 00-.186-.185h-2.118a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186zm0 2.714h2.118a.185.185 0 00.186-.185V9.006a.185.185 0 00-.186-.186h-2.118a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185zm-2.954 0h2.119a.186.186 0 00.185-.185V9.006a.185.185 0 00-.185-.186H8.075a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185zm0-2.714h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H8.075a.185.185 0 00-.185.185v1.887c0 .102.083.186.185.186zm-2.955 2.714h2.119a.186.186 0 00.185-.185V9.006a.185.185 0 00-.185-.186H5.12a.185.185 0 00-.185.186v1.887c0 .102.084.185.185.185zm0-2.714h2.119a.186.186 0 00.185-.186V6.29a.185.185 0 00-.185-.185H5.12a.185.185 0 00-.185.185v1.887c0 .102.084.186.185.186zm-2.954 2.714h2.119a.185.185 0 00.185-.185V9.006a.185.185 0 00-.185-.186H2.166a.185.185 0 00-.185.186v1.887c0 .102.083.185.185.185zm23.638 1.157c-.322-.224-1.26-.372-2.29-.115-.285.07-.56.17-.816.297a7.28 7.28 0 00-1.841-1.956c-.089-.06-.184-.083-.277-.074-.093.008-.182.049-.247.118l-.754.8c-.347.368-.293.978.113 1.285.27.204.57.37.892.493a9.98 9.98 0 00-4.043 2.118c-.808.68-1.517 1.488-2.106 2.399-.187.29-.086.67.218.841.11.062.235.093.362.093h12.56c1.173 0 2.293-.418 3.153-1.177.86-.759 1.344-1.802 1.364-2.937.009-.434-.143-.883-.448-1.185z" />
-  </svg>
+  <img
+    src="https://www.svgrepo.com/show/331370/docker.svg"
+    alt="Docker"
+    referrerPolicy="no-referrer"
+    className={`${className} object-contain`}
+  />
 );
 
 const GitIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
@@ -424,7 +435,7 @@ const GitIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) =>
 
 const KaliLinuxIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
   <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSmkzLAzlecTxGwGHS39_K6_uXoOuQ8ztwpinr4JW2tQ&s=10"
+    src="https://iconlogovector.com/uploads/images/2025/06/lg-684b47b1684e8-Kali-Linux.webp"
     alt="Kali Linux"
     referrerPolicy="no-referrer"
     className={`${className} object-contain`}
@@ -442,7 +453,7 @@ const OverleafIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" 
 
 const AndroidHackingIcon: React.FC<{ className?: string }> = ({ className = "w-7 h-7" }) => (
   <img
-    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBctTNk_GRNesVzQurKqWOnt53Wvv_b9DvjLbJmYRBXA&s=10"
+    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDZ164ZgmJDLHLjGGLV2SzZgW-Wi4fzp92G4Bq3ptB4g&s=10"
     alt="Android Hacking"
     referrerPolicy="no-referrer"
     className={`${className} object-contain`}
@@ -452,6 +463,7 @@ const AndroidHackingIcon: React.FC<{ className?: string }> = ({ className = "w-7
 // Skills List
 const EXACT_SKILLS: SkillItem[] = [
   { name: "WordPress", icon: WordPressIcon },
+  { name: "PHP", icon: PhpIcon },
   { name: "Web Development", icon: Code },
   { name: "Python", icon: PythonIcon },
   { name: "Selenium", icon: SeleniumIcon },
