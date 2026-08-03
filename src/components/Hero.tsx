@@ -1,8 +1,7 @@
 import React from 'react';
 import { PERSONAL_INFO } from '../data/portfolioData';
-import { ChevronRight, Download, Award, Github, Linkedin, Mail, Cloud, ShieldCheck, Cpu } from 'lucide-react';
+import { ChevronRight, Github, Linkedin, Mail } from 'lucide-react';
 import { ThreeCanvas } from './ThreeCanvas';
-import confetti from 'canvas-confetti';
 import { motion } from 'motion/react';
 
 interface GoldSparkNameProps {
@@ -113,15 +112,6 @@ const GoldSparkName: React.FC<GoldSparkNameProps> = ({ name }) => {
 };
 
 export const Hero: React.FC = () => {
-  const triggerResumeConfetti = () => {
-    confetti({
-      particleCount: 80,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ['#f97316', '#6366f1', '#a855f7', '#10b981'],
-    });
-  };
-
   return (
     <section id="home" className="relative min-h-screen pt-28 pb-16 flex items-center justify-center overflow-hidden bg-[#050505]">
       {/* Three.js Interactive 3D Background Canvas Layer */}
@@ -169,27 +159,16 @@ export const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* CTAs & Resume download */}
+            {/* CTAs */}
             <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 pt-3">
               <a
                 href={PERSONAL_INFO.knowMoreUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-orange-500 hover:bg-orange-400 text-black font-black text-xs uppercase tracking-wider shadow-lg shadow-orange-500/20 hover:scale-105 transition-all group"
+                className="flex items-center gap-2.5 px-7 py-3.5 rounded-2xl bg-orange-500 hover:bg-orange-400 text-black font-black text-sm uppercase tracking-wider shadow-xl shadow-orange-500/25 hover:scale-105 transition-all group"
               >
                 <span>KNOW MORE</span>
-                <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
-              </a>
-
-              <a
-                href={PERSONAL_INFO.resumeUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={triggerResumeConfetti}
-                className="flex items-center gap-2 px-5 py-2.5 rounded-xl bg-white/5 backdrop-blur-md border border-white/10 hover:border-orange-500/50 text-white font-bold text-xs uppercase tracking-wider transition-all hover:bg-white/10"
-              >
-                <Download className="w-3.5 h-3.5 text-orange-500" />
-                <span>RESUME</span>
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
               </a>
             </div>
 
