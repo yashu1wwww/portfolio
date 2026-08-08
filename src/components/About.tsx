@@ -121,7 +121,7 @@ export const About: React.FC = () => {
                   </motion.a>
 
                   <motion.a
-                    href="#"
+                    href="https://zenodo.org/records/21846323"
                     target="_blank"
                     rel="noopener noreferrer"
                     whileHover={{ y: -3, scale: 1.02 }}
